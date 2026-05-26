@@ -1,4 +1,4 @@
-# HemaTrace (Sara Pro)
+# HemaTrace 
 
 AI-based **fingerprint blood group classification** (4 Rh-positive classes: **A+, B+, AB+, O+**) with a **PyTorch** backend and **Electron** desktop UI.
 
