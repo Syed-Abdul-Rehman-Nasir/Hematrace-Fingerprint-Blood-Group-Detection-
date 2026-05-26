@@ -1,0 +1,92 @@
+# ── Python ────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ── Environment & secrets ─────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials.json
+
+# ── Jupyter / notebooks (local research only) ─────────────────
+.ipynb_checkpoints/
+*_checkpoint.ipynb
+
+# ── Datasets — NEVER commit (mandatory) ───────────────────────
+blood group positives/
+Kaggle dataset/
+unseen dataset/
+Zips/
+A+/
+**/developed dataset/
+**/dataset_blood_group/
+
+# Fingerprint image extensions (datasets use .bmp / .BMP)
+*.bmp
+*.BMP
+
+# App assets are allowed (negate rules above)
+!HemaTrace/assets/
+!HemaTrace/assets/**
+
+# ── Legacy ML artifacts ───────────────────────────────────────
+*.keras
+*.h5
+*.pb
+
+# ── IDE / editor / AI tooling ─────────────────────────────────
+.cursor/
+.cursorrules
+.cursorignore
+**/.cursor/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs & temp ───────────────────────────────────────────────
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# ── Node / Electron ───────────────────────────────────────────
+node_modules/
+HemaTrace/dist/
+HemaTrace/out/
+npm-debug.log*
+yarn-error.log*
+
+# ── OS / archives (often hold datasets) ───────────────────────
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+
+# Legacy TensorFlow research notebook (not used at runtime)
+BloodGroup_Complete_Final_*.ipynb

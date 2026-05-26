@@ -1,0 +1,13 @@
+Unseen root: d:\sara pro\unseen dataset
+Accuracy (labeled): 30.00% (3/10)
+
+O+\01.bmp	true=O+	pred=B+	conf=39.74	match=False
+O+\02.bmp	true=O+	pred=B+	conf=49.69	match=False
+O+\03.bmp	true=O+	pred=O+	conf=39.4	match=True
+O+\04.bmp	true=O+	pred=B+	conf=52.68	match=False
+O+\05.bmp	true=O+	pred=A+	conf=65.54	match=False
+O+\06.bmp	true=O+	pred=B+	conf=46.3	match=False
+O+\07.bmp	true=O+	pred=O+	conf=34.05	match=True
+O+\08.bmp	true=O+	pred=A+	conf=37.26	match=False
+O+\09.bmp	true=O+	pred=O+	conf=36.98	match=True
+O+\10.bmp	true=O+	pred=A+	conf=36.38	match=False

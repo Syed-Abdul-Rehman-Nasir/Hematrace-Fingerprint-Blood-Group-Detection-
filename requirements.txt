@@ -1,0 +1,24 @@
+# Python environment for HemaTrace backend (PyTorch) + notebook utilities
+# Use: python -m venv .venv  then  .venv\Scripts\activate
+#
+# ── GPU on Windows (pip cannot infer this from lines below) ───────────────────
+# A) New venv:  pip install -r requirements.txt   (often installs CPU torch from PyPI)
+# B) Driver:    nvidia-smi  must work (install/update NVIDIA driver if not)
+# C) CUDA torch: pick wheel index from https://pytorch.org/get-started/locally/
+#      pip uninstall -y torch torchvision
+#      pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# D) Verify:    python -c "import torch; print(torch.cuda.is_available(), torch.version.cuda)"
+# Training:     backend/train.py needs CUDA unless HEMATRACE_ALLOW_CPU=1
+
+torch>=2.2.0,<2.7
+torchvision>=0.17.0,<0.22
+opencv-python-headless>=4.8.0
+numpy>=1.24.0,<3
+pillow>=10.0.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.13.0
+jupyter>=1.0.0
+ipykernel>=6.0.0
+flask>=3.0.0
+flask-cors>=4.0.0
