@@ -34,8 +34,11 @@ KAGGLE_CLASSES = {
 # ── Model & output paths ───────────────────────────────────────
 MODELS_DIR   = os.path.join(ROOT, "backend", "models")
 RESULTS_DIR  = os.path.join(ROOT, "backend", "results")
+DATA_DIR     = os.path.join(ROOT, "backend", "data")
+DB_PATH      = os.path.join(DATA_DIR, "hematrace.db")
 os.makedirs(MODELS_DIR,  exist_ok=True)
 os.makedirs(RESULTS_DIR, exist_ok=True)
+os.makedirs(DATA_DIR,    exist_ok=True)
 
 MODEL_PATH   = os.path.join(MODELS_DIR, "hemtrace_best.pt")
 HISTORY_PATH = os.path.join(RESULTS_DIR, "training_history.png")

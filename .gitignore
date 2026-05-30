@@ -53,11 +53,13 @@ A+/
 *.h5
 *.pb
 
-# ── IDE / editor / AI tooling ─────────────────────────────────
+# ── IDE / editor ──────────────────────────────────────────────
 .cursor/
 .cursorrules
 .cursorignore
 **/.cursor/
+AGENTS.md
+**/.vscode/settings.json
 .idea/
 .vscode/
 *.swp
@@ -66,6 +68,10 @@ A+/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# ── Local app database (patient / test records) ───────────────
+backend/data/*.db
+backend/data/*.db-journal
 
 # ── Logs & temp ───────────────────────────────────────────────
 *.log

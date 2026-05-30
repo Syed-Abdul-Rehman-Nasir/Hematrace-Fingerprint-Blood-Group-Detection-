@@ -12,7 +12,8 @@ PyTorch + Flask service for fingerprint → blood group (A+, B+, AB+, O+).
 | `model.py` | `HemaTraceNet` (EfficientNet-B0) |
 | `train.py` | Two-phase training |
 | `predict.py` | TTA inference |
-| `server.py` | `GET /health`, `POST /predict` |
+| `server.py` | `GET /health`, `POST /predict`, patient/test API |
+| `database.py` | SQLite (`data/hematrace.db`) |
 | `evaluate_unseen.py` | Eval on `unseen dataset/` |
 
 ## API

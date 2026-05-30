@@ -408,7 +408,7 @@ Refresh §5.6 after retraining.
 | Eval tooling | `evaluate_unseen.py`, `unseen_evaluation.txt` |
 | UI cleanup (2026) | Removed university/FYP branding, team & advisor from About; login placeholder **Abdul Rehman** |
 | Docs (2026) | Full refresh: run commands, metrics, UI state, separate terminals, troubleshooting |
-| GitHub prep (2026) | `.gitignore`, portable `ROOT`, removed `.cursor`/checkpoints, `README.md`, `DATA_SETUP.md` |
+| GitHub prep (2026) | `.gitignore`, portable `ROOT`, editor checkpoints excluded, `README.md`, `DATA_SETUP.md` |
 
 ---
 
@@ -420,7 +420,7 @@ Enforced by [`.gitignore`](.gitignore):
 
 - All dataset directories (`blood group positives/`, `Kaggle dataset/`, `unseen dataset/`, `Zips/`, `A+/`)
 - All `*.bmp` / `*.BMP` files anywhere in the repo
-- `.venv/`, `node_modules/`, `.cursor/`, `.ipynb_checkpoints/`, `.env`, `*.keras`
+- `.venv/`, `node_modules/`, `.ipynb_checkpoints/`, `.env`, `*.keras`, local SQLite DB
 
 ### 15.2 What is included
 

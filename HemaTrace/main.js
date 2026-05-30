@@ -41,6 +41,39 @@ function waitForServer(retries = 30, delayMs = 1000) {
   });
 }
 
+function apiRequest(method, apiPath, body) {
+  return new Promise((resolve) => {
+    const payload = body ? JSON.stringify(body) : null;
+    const options = {
+      hostname: '127.0.0.1',
+      port: 5000,
+      path: apiPath,
+      method,
+      headers: payload
+        ? { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(payload) }
+        : {}
+    };
+    const req = http.request(options, res => {
+      let data = '';
+      res.on('data', chunk => { data += chunk; });
+      res.on('end', () => {
+        try {
+          resolve({ status: res.statusCode, data: JSON.parse(data) });
+        } catch {
+          resolve({ status: res.statusCode, data: { error: 'Invalid JSON from server' } });
+        }
+      });
+    });
+    req.on('error', err => resolve({ status: 0, data: { error: err.message } }));
+    if (payload) req.write(payload);
+    req.end();
+  });
+}
+
+ipcMain.handle('api-request', async (_event, { method, path, body }) => {
+  return apiRequest(method || 'GET', path, body);
+});
+
 // IPC handler: renderer sends ArrayBuffer of image bytes → forward to Python
 ipcMain.handle('predict-blood-group', async (_event, arrayBuffer) => {
   const bytes = Buffer.from(arrayBuffer);
