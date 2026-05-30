@@ -1,6 +1,10 @@
 # Local data setup (not in Git)
 
-Git **never** stores fingerprint datasets. After cloning, create this layout under your project root:
+Git **never** stores fingerprint datasets. `.gitignore` blocks all dataset folders, `.bmp` images, archives (`.zip`, etc.), and the research notebook at the repo root.
+
+**Before every push:** run `git status` and confirm you do **not** see `blood group positives/`, `Kaggle dataset/`, `unseen dataset/`, `Zips/`, or thousands of `.bmp` files. If any appear as “to be committed”, run `git reset` and do not use `git add -A` blindly.
+
+After cloning, create this layout under your project root:
 
 ```
 <project-root>/

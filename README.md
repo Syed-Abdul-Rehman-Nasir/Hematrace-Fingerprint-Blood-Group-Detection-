@@ -2,7 +2,7 @@
 
 AI-based **fingerprint blood group classification** (4 Rh-positive classes: **A+, B+, AB+, O+**) with a **PyTorch** backend and **Electron** desktop UI.
 
-> **Datasets are not in this repository.** You must place training data locally (see [DATA_SETUP.md](DATA_SETUP.md)). Image files are blocked by `.gitignore`.
+> **Datasets are not in this repository** and must not be pushed to GitHub. Place training data only on your machine ([DATA_SETUP.md](DATA_SETUP.md)). `.gitignore` excludes dataset folders (`blood group positives/`, `Kaggle dataset/`, `unseen dataset/`, `Zips/`, class folders) and fingerprint images (`.bmp`, etc.).
 
 ## Repository layout
 

@@ -32,21 +32,53 @@ credentials.json
 *_checkpoint.ipynb
 
 # ── Datasets — NEVER commit (mandatory) ───────────────────────
+# Canonical folders at repo root (see DATA_SETUP.md)
+/blood group positives/
+/Kaggle dataset/
+/unseen dataset/
+/Zips/
+/A+/
+
+# Same names if copied elsewhere
 blood group positives/
 Kaggle dataset/
 unseen dataset/
 Zips/
-A+/
+
+# Nested training / eval trees
 **/developed dataset/
 **/dataset_blood_group/
 
-# Fingerprint image extensions (datasets use .bmp / .BMP)
+# Per-class image folders (A+, B+, AB+, O+ and Rh- variants)
+**/A+/
+**/A-/
+**/B+/
+**/B-/
+**/AB+/
+**/AB-/
+**/O+/
+**/O-/
+
+# Fingerprint & archive formats used by datasets
 *.bmp
 *.BMP
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.tif
+*.tiff
+*.TIF
+*.TIFF
+*.jfif
+*.JFIF
+*.raw
+*.RAW
 
-# App assets are allowed (negate rules above)
+# App UI assets only (must come after rules above)
 !HemaTrace/assets/
 !HemaTrace/assets/**
+!HemaTrace/assets/**/*
 
 # ── Legacy ML artifacts ───────────────────────────────────────
 *.keras
