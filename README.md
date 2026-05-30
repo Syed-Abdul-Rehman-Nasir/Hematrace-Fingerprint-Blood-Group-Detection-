@@ -37,15 +37,17 @@ This project was built as a complete, end-to-end engineering prototype: from raw
 ## System Architecture
 
 ```mermaid
-flowchart TD
-    A["🖥️ Electron Desktop App\nrenderer/index.html · main.js · preload.js\nLogin → New Test → Scan → Result"]
-    B["⚙️ Flask REST API · localhost:5000\nSpawned by Electron on startup\nGET /health · POST /predict"]
-    C["🧠 HemaTraceNet · hemtrace_best.pt\nEfficientNet-B0 · PyTorch\nConv1×1 → Backbone → FC256 → FC128 → 4 logits"]
-    D["🔬 Preprocessing Pipeline · preprocess.py\nCLAHE → Gabor bank → Blur → 224×224 → Norm · Aug ×10 TTA"]
 
-    A -->|"IPC bridge → POST /predict (ArrayBuffer)"| B
-    B -->|"multipart image · predict.py · 10× TTA"| C
-    C -->|"224×224 grayscale tensor"| D
+flowchart TD
+    A["**Electron App**\n`main.js` · `renderer/index.html`"]
+    B["**Flask API** · `:5000`\n`GET /health` · `POST /predict`"]
+    C["**HemaTraceNet**\nEfficientNet-B0 · 4-class"]
+    D["**Preprocessing**\nCLAHE → Gabor → 224×224"]
+
+    A -->|IPC → POST /predict| B
+    B -->|10× TTA inference| C
+    C -->|grayscale tensor| D
+
 ```
 
 ---
