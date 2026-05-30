@@ -37,30 +37,8 @@ This project was built as a complete, end-to-end engineering prototype: from raw
 ## System Architecture
 
 ```
-┌─────────────────────────────────────┐
-│         Electron Desktop App         │
-│  Login → New Test → Scan → Result   │
-│  (renderer/index.html + main.js)    │
-└──────────────┬──────────────────────┘
-               │ IPC → POST /predict
-               ▼
-┌─────────────────────────────────────┐
-│         Flask REST API :5000         │
-│  /health   /predict (multipart)     │
-└──────────────┬──────────────────────┘
-               │
-               ▼
-┌─────────────────────────────────────┐
-│       HemaTraceNet (PyTorch)         │
-│  Conv1×1 adapter → EfficientNet-B0  │
-│  → BN → FC256 → Drop → FC128 → 4   │
-└──────────────┬──────────────────────┘
-               │
-               ▼
-┌─────────────────────────────────────┐
-│       Preprocessing Pipeline         │
-│  CLAHE → Gabor Bank → Blur → 224²   │
-└─────────────────────────────────────┘
+<img width="1440" height="1160" alt="image" src="https://github.com/user-attachments/assets/427d68ec-9c87-4cbc-8e48-7932afadb244" />
+
 ```
 
 ---
