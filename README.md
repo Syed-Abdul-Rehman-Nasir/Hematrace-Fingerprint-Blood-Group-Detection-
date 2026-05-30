@@ -19,7 +19,9 @@ This project was built as a complete, end-to-end engineering prototype: from raw
 > ⚠️ **Research prototype only — not validated for clinical diagnosis.**
 
 ---
-https://github.com/user-attachments/assets/e6193001-1a9c-4222-af60-ae373c422179
+## 🎬 Demo Video
+
+[![Watch Demo](tumb.png)](https://github.com/user-attachments/assets/e6193001-1a9c-4222-af60-ae373c422179)
 ## Key Features
 
 - **Custom preprocessing pipeline** — CLAHE contrast enhancement + Gabor filter bank (8 orientations) + Gaussian smoothing, all before the neural network sees a pixel
